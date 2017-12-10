@@ -177,7 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &11596077
 Prefab:
@@ -398,59 +398,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec8fd9f28e09b43e6b8026e7876bba2e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &108913412
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 108913414}
-  - component: {fileID: 108913413}
-  m_Layer: 0
-  m_Name: Game Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &108913413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 108913412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78f1639a477254614b325291560d5739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2016505108}
-  gameState: 0
-  score: 0
-  canBeatLevel: 0
-  beatLevelScore: 5
-  mainCanvas: {fileID: 914563712}
-  mainScoreDisplay: {fileID: 1479401081}
-  gameOverCanvas: {fileID: 494936250}
-  gameOverScoreDisplay: {fileID: 1154974870}
-  beatLevelCanvas: {fileID: 0}
-  backgroundMusic: {fileID: 1460803884}
-  gameOverSFX: {fileID: 8300000, guid: b513e143fb7514876a6c05afa3240abb, type: 3}
-  beatLevelSFX: {fileID: 0}
---- !u!4 &108913414
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 108913412}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &147210048 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4147303946539044, guid: ec8fd9f28e09b43e6b8026e7876bba2e,
@@ -486,7 +433,7 @@ Transform:
   - {fileID: 1896465250}
   - {fileID: 1962385497}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &252529500 stripped
 Transform:
@@ -849,7 +796,7 @@ RectTransform:
   - {fileID: 1154974869}
   - {fileID: 1213514382}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -937,7 +884,7 @@ Transform:
   - {fileID: 252529500}
   - {fileID: 1347558765}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &580982683
 GameObject:
@@ -971,7 +918,7 @@ Transform:
   - {fileID: 1250422139}
   - {fileID: 1345859137}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &761493363 stripped
 Transform:
@@ -1015,7 +962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 753ea9ccf9eee6c42a0954ec8663b992, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 13500000, guid: 753ea9ccf9eee6c42a0954ec8663b992, type: 2}
       propertyPath: m_Material
@@ -1180,7 +1127,7 @@ RectTransform:
   m_Children:
   - {fileID: 1479401080}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1307,7 +1254,7 @@ Transform:
   - {fileID: 1148098578}
   - {fileID: 761493363}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1213514381
 GameObject:
@@ -1524,7 +1471,7 @@ RectTransform:
   - {fileID: 1870351963}
   - {fileID: 34675590}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1855,6 +1802,7 @@ GameObject:
   - component: {fileID: 1460803880}
   - component: {fileID: 1460803885}
   - component: {fileID: 1460803884}
+  - component: {fileID: 1460803886}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1923,7 +1871,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1460803884
 AudioSource:
@@ -2021,6 +1969,30 @@ MonoBehaviour:
   height: 5
   rotationDamping: 0
   heightDamping: 0
+--- !u!114 &1460803886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460803879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f1639a477254614b325291560d5739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2016505108}
+  gameState: 0
+  score: 0
+  canBeatLevel: 1
+  beatLevelScore: 5
+  mainCanvas: {fileID: 914563712}
+  mainScoreDisplay: {fileID: 1479401081}
+  gameOverCanvas: {fileID: 494936250}
+  gameOverScoreDisplay: {fileID: 1154974870}
+  beatLevelCanvas: {fileID: 1330750793}
+  backgroundMusic: {fileID: 1460803884}
+  gameOverSFX: {fileID: 8300000, guid: b513e143fb7514876a6c05afa3240abb, type: 3}
+  beatLevelSFX: {fileID: 8300000, guid: 97e9e021c4ecf404db703fdbf5b802c3, type: 3}
 --- !u!1 &1479401079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2127,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1521536608
 Prefab:
