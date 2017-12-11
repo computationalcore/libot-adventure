@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f8043d604074445a91b7d76ee56a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: Level1
+  LevelToLoad: Level2
 --- !u!114 &1426685445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   gameState: 0
   score: 0
   canBeatLevel: 1
-  beatLevelScore: 5
+  beatLevelScore: 1
   mainCanvas: {fileID: 914563712}
   mainScoreDisplay: {fileID: 1479401081}
   gameOverCanvas: {fileID: 494936250}
