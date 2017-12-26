@@ -158,7 +158,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.computationalcore.SpheroMadness
+    Android: com.computationalcore.SpheroAdventure
+    iOS: com.computationalcore.SpheroAdventure
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -409,7 +410,7 @@ PlayerSettings:
       m_Height: 96
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: a04df4890a8a94b3ea7cdb694deddf1b, type: 3}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
