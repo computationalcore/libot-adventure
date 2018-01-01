@@ -566,6 +566,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
+        type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.483
+      objectReference: {fileID: 0}
+    - target: {fileID: 114442966012690510, guid: 09cdde0ccf139412b9387a871a1fdc3d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09cdde0ccf139412b9387a871a1fdc3d, type: 2}
   m_IsPrefabParent: 0
@@ -996,12 +1021,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.483
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2831,6 +2856,26 @@ Prefab:
     - target: {fileID: 1099526042550660, guid: e0d15d5b9c081429a8c1814443468dd9, type: 2}
       propertyPath: m_Name
       value: BoxBorder
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680569948339972, guid: e0d15d5b9c081429a8c1814443468dd9,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680569948339972, guid: e0d15d5b9c081429a8c1814443468dd9,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680569948339972, guid: e0d15d5b9c081429a8c1814443468dd9,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 114680569948339972, guid: e0d15d5b9c081429a8c1814443468dd9,
+        type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.483
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0d15d5b9c081429a8c1814443468dd9, type: 2}

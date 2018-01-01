@@ -1,30 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MobileCanvasControl : MonoBehaviour {
+public class TitleCanvas : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject mobileJostick = GameObject.FindGameObjectWithTag ("MobileJostick");
+		RectTransform gameTitle = this.gameObject.GetComponent<RectTransform> ();
+		Text m_Text = this.gameObject.GetComponent<Text>();
+		print (Screen.width);
+		m_Text.fontSize = (int) (0.08 * Screen.width);
+		print (m_Text.fontSize);
+
+
 		// Check if the device running this is a handheld and show jostick control.
-		if (SystemInfo.deviceType == DeviceType.Handheld) {
+		if (m_Text.fontSize < 180) {
+			print("Adaptei");
 			// Set the correct size and position of the button dependent of the screen size 
-			float jostickSize = Screen.height * 0.30f;
-			float handleSize = jostickSize * 0.5f;
-			float position = (jostickSize / 2) + 20;
+			//Change the RectTransform size to allow larger fonts and sentences
+			gameTitle.sizeDelta = new Vector2(m_Text.fontSize, 100);
 
-
-			GameObject jostickHandle = GameObject.FindGameObjectWithTag ("MobileJostickHandle");
-
-			RectTransform rtJostick = mobileJostick.GetComponent<RectTransform> ();
-			rtJostick.sizeDelta = new Vector2 (jostickSize, jostickSize);
-			rtJostick.position = new Vector2 (position, position);
-
-			RectTransform rtHandle = jostickHandle.GetComponent<RectTransform> ();
-			rtHandle.sizeDelta = new Vector2 (handleSize, handleSize);
-		} else {
-			mobileJostick.SetActive (false);
 		}
 	}
 }
