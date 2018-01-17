@@ -7,15 +7,15 @@ PlayerSettings:
   productGUID: 9e0d3993f82584fa1853c348df3585ab
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 2
+  defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Vin Busquet
-  productName: Sphero Adventure
+  productName: LiBot Adventure
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 0.50980395, b: 0.7921569, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -55,8 +55,8 @@ PlayerSettings:
   iosAppInBackgroundBehavior: 0
   displayResolutionDialog: 1
   iosAllowHTTPDownload: 1
-  allowedAutorotateToPortrait: 1
-  allowedAutorotateToPortraitUpsideDown: 1
+  allowedAutorotateToPortrait: 0
+  allowedAutorotateToPortraitUpsideDown: 0
   allowedAutorotateToLandscapeRight: 1
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
@@ -158,8 +158,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.computationalcore.SpheroAdventure
-    iOS: com.computationalcore.SpheroAdventure
+    Android: com.computationalcore.LiBotAdventure
+    iOS: com.computationalcore.LiBotAdventure
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -189,7 +189,7 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  iPhoneSplashScreen: {fileID: 0}
+  iPhoneSplashScreen: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157, type: 3}
   iPhoneHighResSplashScreen: {fileID: 0}
   iPhoneTallHighResSplashScreen: {fileID: 0}
   iPhone47inSplashScreen: {fileID: 0}
@@ -210,20 +210,23 @@ PlayerSettings:
   tvOSTopShelfImageLayers2x: []
   tvOSTopShelfImageWideLayers: []
   tvOSTopShelfImageWideLayers2x: []
-  iOSLaunchScreenType: 0
-  iOSLaunchScreenPortrait: {fileID: 0}
-  iOSLaunchScreenLandscape: {fileID: 0}
+  iOSLaunchScreenType: 1
+  iOSLaunchScreenPortrait: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157,
+    type: 3}
+  iOSLaunchScreenLandscape: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157,
+    type: 3}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4291461632
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
-  iOSLaunchScreeniPadType: 0
-  iOSLaunchScreeniPadImage: {fileID: 0}
+  iOSLaunchScreeniPadType: 1
+  iOSLaunchScreeniPadImage: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157,
+    type: 3}
   iOSLaunchScreeniPadBackgroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4291461632
   iOSLaunchScreeniPadFillPct: 100
   iOSLaunchScreeniPadSize: 100
   iOSLaunchScreeniPadCustomXibPath: 
@@ -243,13 +246,13 @@ PlayerSettings:
   clonedFromGUID: 00000000000000000000000000000000
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 0}
+  androidSplashScreen: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157, type: 3}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
-  androidEnableBanner: 1
+  androidEnableBanner: 0
   androidUseLowAccuracyLocation: 0
   m_AndroidBanners:
   - width: 320
@@ -261,166 +264,166 @@ PlayerSettings:
   - m_BuildTarget: iPhone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b16edbf51d8d9445fb828babb657de69, type: 3}
+      m_Icon: {fileID: 2800000, guid: 8f133a68784bb4721845d7b0146a74cd, type: 3}
       m_Width: 180
       m_Height: 180
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 3143f6e20e10c45fcb95b12397a5c72b, type: 3}
+      m_Icon: {fileID: 2800000, guid: 9403e71bd8cc44d129fc53e7d134e611, type: 3}
       m_Width: 167
       m_Height: 167
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4fa5bb447a3f24cf0af68937e221ca3a, type: 3}
+      m_Icon: {fileID: 2800000, guid: 69100ed893ade42e48326cccec8cf866, type: 3}
       m_Width: 152
       m_Height: 152
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: a9a93ace0a93e4106bcdec0f04077b7c, type: 3}
+      m_Icon: {fileID: 2800000, guid: 93d7b9d1de86f414a9fb3cfb7b6e322e, type: 3}
       m_Width: 144
       m_Height: 144
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 905cb476fbb0e4e489b766bad3e110f1, type: 3}
+      m_Icon: {fileID: 2800000, guid: a4882ad7ec121469dbcf2ef314f19623, type: 3}
       m_Width: 120
       m_Height: 120
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b9f3daeed0c7844a09d62f6263998208, type: 3}
+      m_Icon: {fileID: 2800000, guid: e8361600dec8048c1944c3f0c229bd50, type: 3}
       m_Width: 114
       m_Height: 114
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: ae9ae50dca2ae4072a1d7f5e6b1048d7, type: 3}
+      m_Icon: {fileID: 2800000, guid: d428ec73be8734f6fabdc43630aad787, type: 3}
       m_Width: 76
       m_Height: 76
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 827fad818963048cba71a1826710120b, type: 3}
+      m_Icon: {fileID: 2800000, guid: 14257000632ae4b91ad16f87d4b4d83e, type: 3}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 43a736e942c814469bd8a99ebccb025c, type: 3}
+      m_Icon: {fileID: 2800000, guid: 44ec1c40faceb49f29906d7881df6c9e, type: 3}
       m_Width: 57
       m_Height: 57
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b506aaa09eee44b27873c1578b6390c4, type: 3}
+      m_Icon: {fileID: 2800000, guid: a4882ad7ec121469dbcf2ef314f19623, type: 3}
       m_Width: 120
       m_Height: 120
       m_Kind: 3
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b5cb965162fdc46b1b7c6c45fe29eb96, type: 3}
+      m_Icon: {fileID: 2800000, guid: f49b367abc50347da8fb0e76ee929c9c, type: 3}
       m_Width: 80
       m_Height: 80
       m_Kind: 3
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4f231be4217274d37bac1bcb69568ae6, type: 3}
+      m_Icon: {fileID: 2800000, guid: ffcc10c4cf558409b949ef0f9a068b56, type: 3}
       m_Width: 40
       m_Height: 40
       m_Kind: 3
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 423ec04ae468f49109b406f768527568, type: 3}
+      m_Icon: {fileID: 2800000, guid: d7b62abea01e54fe69b3b5f51fdd7ec4, type: 3}
       m_Width: 87
       m_Height: 87
       m_Kind: 1
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 03210d147d9954e6098df19411f43292, type: 3}
+      m_Icon: {fileID: 2800000, guid: 682a037c8ee8f41939124cd95e43454f, type: 3}
       m_Width: 58
       m_Height: 58
       m_Kind: 1
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4c672fb034aa847a6996fd66f73cc003, type: 3}
+      m_Icon: {fileID: 2800000, guid: d00edbc67dd8f4f258565190ea08adfb, type: 3}
       m_Width: 29
       m_Height: 29
       m_Kind: 1
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: f4a58856493154302a44c2b158d9bf33, type: 3}
+      m_Icon: {fileID: 2800000, guid: 8819cb868ba544271af47faf9e369d1c, type: 3}
       m_Width: 60
       m_Height: 60
       m_Kind: 2
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4f231be4217274d37bac1bcb69568ae6, type: 3}
+      m_Icon: {fileID: 2800000, guid: ffcc10c4cf558409b949ef0f9a068b56, type: 3}
       m_Width: 40
       m_Height: 40
       m_Kind: 2
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 44ce3e710a78e43c0b83e4e3ca9141db, type: 3}
+      m_Icon: {fileID: 2800000, guid: 2fe24ce940159458796bb88f0669c92c, type: 3}
       m_Width: 20
       m_Height: 20
       m_Kind: 2
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 29481969797da4217a28eca9daec8058, type: 3}
+      m_Icon: {fileID: 2800000, guid: 1b8e94d06f31d4d1c8187fc758054b34, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 4
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 29481969797da4217a28eca9daec8058, type: 3}
+      m_Icon: {fileID: 2800000, guid: 23101ea1704354590997284236b570a6, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 58d9f6322c0b749eaa0531ee105c7825, type: 3}
+      m_Icon: {fileID: 2800000, guid: 825e61c2cc2bd4403b588d702502657f, type: 3}
       m_Width: 512
       m_Height: 512
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: d70dcfedf2ca9456884a153f28ee4393, type: 3}
+      m_Icon: {fileID: 2800000, guid: 554aed5bfa6a8412bbecc112e03c254d, type: 3}
       m_Width: 256
       m_Height: 256
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 723bdc04d77274523ad51bafe2d9b9e7, type: 3}
+      m_Icon: {fileID: 2800000, guid: 836e0d35dbf594734b7343c26d8844c5, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: dcfc83a110d1145788407fce2f9fa005, type: 3}
+      m_Icon: {fileID: 2800000, guid: 29962fa27c13d41b7ba3a6ac61e3322a, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b87432848c3064d7185449e6ffbfe080, type: 3}
+      m_Icon: {fileID: 2800000, guid: a6cf45197bb0e49faa8e3fa12ccd074f, type: 3}
       m_Width: 32
       m_Height: 32
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b8947e47d2d814e0a9a5d2290dbb6bc3, type: 3}
+      m_Icon: {fileID: 2800000, guid: b6578fd5b42d84bb2acd76f1bf947ca1, type: 3}
       m_Width: 16
       m_Height: 16
       m_Kind: 0
   - m_BuildTarget: Android
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 689299651e02d41c8836b87a2827dfac, type: 3}
+      m_Icon: {fileID: 2800000, guid: a3bb6cd23e29246b58bc358b6aeed0a4, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: f24c0741101844f2997140caa6741662, type: 3}
+      m_Icon: {fileID: 2800000, guid: 93d7b9d1de86f414a9fb3cfb7b6e322e, type: 3}
       m_Width: 144
       m_Height: 144
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: d5cde3030f9c64cbf944683721950711, type: 3}
+      m_Icon: {fileID: 2800000, guid: 14c2a254988ae4b648146be7b5d7f21b, type: 3}
       m_Width: 96
       m_Height: 96
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: a04df4890a8a94b3ea7cdb694deddf1b, type: 3}
+      m_Icon: {fileID: 2800000, guid: 14257000632ae4b91ad16f87d4b4d83e, type: 3}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: bd3f62e9ca78748d5b7d6f23ea6be635, type: 3}
+      m_Icon: {fileID: 2800000, guid: c2e48f10f2d9d4a019607f3d0529a4f4, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 0cdf46e1e7eb54b95bd221f3d6714e13, type: 3}
+      m_Icon: {fileID: 2800000, guid: 23ebeebe88aea4e51a73f1a97e7caf6a, type: 3}
       m_Width: 36
       m_Height: 36
       m_Kind: 0
