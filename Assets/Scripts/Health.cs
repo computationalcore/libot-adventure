@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 	
@@ -27,10 +28,11 @@ public class Health : MonoBehaviour {
 		// store initial position as respawn location
 		respawnPosition = transform.position;
 		respawnRotation = transform.rotation;
-		
-		if (LevelToLoad=="") // default to current scene 
+
+		// default to current scene
+		if (LevelToLoad=="")
 		{
-			LevelToLoad = Application.loadedLevelName;
+			LevelToLoad = SceneManager.GetActiveScene().name;
 		}
 	}
 	
@@ -54,7 +56,7 @@ public class Health : MonoBehaviour {
 				switch(onLivesGone)
 				{
 				case deathAction.loadLevelWhenDead:
-					Application.LoadLevel (LevelToLoad);
+					SceneManager.LoadScene(LevelToLoad);
 					break;
 				case deathAction.doNothingWhenDead:
 					// do nothing, death must be handled in another way elsewhere

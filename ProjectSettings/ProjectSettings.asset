@@ -160,6 +160,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.computationalcore.LiBotAdventure
     iOS: com.computationalcore.LiBotAdventure
+    tvOS: com.computationalcore.LiBotAdventure
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -201,8 +202,9 @@ PlayerSettings:
   iPadHighResPortraitSplashScreen: {fileID: 0}
   iPadLandscapeSplashScreen: {fileID: 0}
   iPadHighResLandscapeSplashScreen: {fileID: 0}
-  appleTVSplashScreen: {fileID: 0}
-  appleTVSplashScreen2x: {fileID: 0}
+  appleTVSplashScreen: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157, type: 3}
+  appleTVSplashScreen2x: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157,
+    type: 3}
   tvOSSmallIconLayers: []
   tvOSSmallIconLayers2x: []
   tvOSLargeIconLayers: []

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -64,9 +64,12 @@ public class GameManager : MonoBehaviour {
 					// set the end game score
 					gameOverScoreDisplay.text = mainScoreDisplay.text;
 
-					// switch which GUI is showing		
+					// Show Game Over Canvas		
 					mainCanvas.SetActive (false);
 					gameOverCanvas.SetActive (true);
+					// Set Play Again Button as selected
+					GameObject myEventSystem = GameObject.Find("EventSystem");
+					myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Play Again Button"));
 				} else if (canBeatLevel && score>=beatLevelScore) {
 					// update gameState
 					gameState = gameStates.BeatLevel;
@@ -74,9 +77,13 @@ public class GameManager : MonoBehaviour {
 					// hide the player so game doesn't continue playing
 					player.SetActive(false);
 
-					// switch which GUI is showing			
+					// Show Beat Level Canvas		
 					mainCanvas.SetActive (false);
 					beatLevelCanvas.SetActive (true);
+
+					// Set Play Again Button as selected
+					GameObject myEventSystem = GameObject.Find("EventSystem");
+					myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Next Level Button"));
 				}
 				break;
 			case gameStates.Death:
@@ -96,7 +103,7 @@ public class GameManager : MonoBehaviour {
 				}
 				break;
 			case gameStates.GameOver:
-				// nothing
+				// Do nothing
 				break;
 		}
 
