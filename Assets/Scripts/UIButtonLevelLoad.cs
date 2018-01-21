@@ -4,15 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class UIButtonLevelLoad : MonoBehaviour {
 
-	public string LevelToLoad;
-
-	public void loadLevel() {
-		//Load the level from LevelToLoad
-		SceneManager.LoadScene(LevelToLoad);
+	// Load a level (scene) by name.
+	public void loadLevel(string levelName) {
+		SceneManager.LoadScene(levelName);
 	}
 
+	// Load the next level based on build index.
+	public void loadNextLevel() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+	// Reload the current level.
 	public void reloadLevel() {
-		// Reload the current level
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 }

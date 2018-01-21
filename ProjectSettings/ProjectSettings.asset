@@ -126,7 +126,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 1.0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -159,10 +159,11 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.computationalcore.LiBotAdventure
-    iOS: com.computationalcore.LiBotAdventure
-    tvOS: com.computationalcore.LiBotAdventure
+    Standalone: com.computationalcore.LiBotAdventure.macos
+    iOS: com.computationalcore.LiBotAdventure.ios
+    tvOS: com.computationalcore.LiBotAdventure.ios
   buildNumber: {}
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -259,8 +260,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157, type: 3}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: Build/Android/LiBotAdventure.keystore
+  AndroidKeyaliasName: libot adventure
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0

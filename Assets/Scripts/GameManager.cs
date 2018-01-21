@@ -13,9 +13,14 @@ public class GameManager : MonoBehaviour {
 	public enum gameStates {Playing, Death, GameOver, BeatLevel};
 	public gameStates gameState = gameStates.Playing;
 
-	public int score=0;
+	public int score = 0;
+
 	public bool canBeatLevel = false;
-	public int beatLevelScore=0;
+
+	[Tooltip("Mark this is current scene/level is the final one.")]
+	public bool isFinalLevel = false;
+
+	public int beatLevelScore = 0;
 
 	public GameObject mainCanvas;
 	public Text mainScoreDisplay;
@@ -31,7 +36,10 @@ public class GameManager : MonoBehaviour {
 	[Tooltip("Only need to set if canBeatLevel is set to true.")]
 	public AudioClip beatLevelSFX;
 
+
+
 	private Health playerHealth;
+
 
 	void Start () {
 		if (gm == null) 
@@ -81,9 +89,15 @@ public class GameManager : MonoBehaviour {
 					mainCanvas.SetActive (false);
 					beatLevelCanvas.SetActive (true);
 
-					// Set Play Again Button as selected
 					GameObject myEventSystem = GameObject.Find("EventSystem");
-					myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Next Level Button"));
+					if (!isFinalLevel) {
+						// Set Play Again Button as selected.
+						myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (GameObject.Find ("Next Level Button"));
+					} else {
+						// Set Main Menu Button as selected.
+						myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem> ().SetSelectedGameObject (GameObject.Find ("Main Menu Button"));
+					}
+					
 				}
 				break;
 			case gameStates.Death:

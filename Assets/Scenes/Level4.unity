@@ -13818,6 +13818,61 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114050377867061476, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 874964701}
+    - target: {fileID: 114050377867061476, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050377867061476, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050377867061476, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114107386711833596, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 224413225948391654, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224413225948391654, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224413225948391654, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050377867061476, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050377867061476, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.14509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050377867061476, guid: 926e22f33800e40d396bce7827a60f7f,
+        type: 2}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 926e22f33800e40d396bce7827a60f7f, type: 2}
   m_IsPrefabParent: 0
@@ -13826,6 +13881,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224748585220422230, guid: 926e22f33800e40d396bce7827a60f7f,
     type: 2}
   m_PrefabInternal: {fileID: 874964699}
+--- !u!114 &874964701 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114060630870740466, guid: 926e22f33800e40d396bce7827a60f7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 874964699}
+  m_Script: {fileID: 11500000, guid: 64f8043d604074445a91b7d76ee56a20, type: 3}
 --- !u!4 &876978668 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4803254545479948, guid: 87dff218b8b0d479db9da8a87088438b,
@@ -24488,8 +24549,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 752108416}
   gameState: 0
-  score: 0
+  score: 89
   canBeatLevel: 1
+  isFinalLevel: 1
   beatLevelScore: 100
   mainCanvas: {fileID: 1558257520}
   mainScoreDisplay: {fileID: 1385777069}
