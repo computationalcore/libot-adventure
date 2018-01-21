@@ -452,46 +452,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 114871673105886290, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0.483
-      objectReference: {fileID: 0}
-    - target: {fileID: 114442966012690510, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224791224744325072, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.4166262
-      objectReference: {fileID: 0}
-    - target: {fileID: 224791224744325072, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.4166262
-      objectReference: {fileID: 0}
-    - target: {fileID: 224791224744325072, guid: 09cdde0ccf139412b9387a871a1fdc3d,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.4166262
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09cdde0ccf139412b9387a871a1fdc3d, type: 2}
   m_IsPrefabParent: 0

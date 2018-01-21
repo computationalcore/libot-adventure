@@ -7,9 +7,8 @@ public class MobileCanvasControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Check if the device running this is a handheld and show jostick control.
-		if (SystemInfo.deviceType != DeviceType.Handheld) {
-			GameObject mobileJostick = GameObject.FindGameObjectWithTag ("MobileJostick");
-			mobileJostick.SetActive (false);
+		if ( (SystemInfo.deviceType != DeviceType.Handheld) || (Application.platform == RuntimePlatform.tvOS)) {
+			this.gameObject.SetActive (false);
 		}
 	}
 }

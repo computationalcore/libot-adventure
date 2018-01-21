@@ -202,16 +202,26 @@ PlayerSettings:
   iPadHighResPortraitSplashScreen: {fileID: 0}
   iPadLandscapeSplashScreen: {fileID: 0}
   iPadHighResLandscapeSplashScreen: {fileID: 0}
-  appleTVSplashScreen: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157, type: 3}
-  appleTVSplashScreen2x: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157,
+  appleTVSplashScreen: {fileID: 2800000, guid: d1a65289b396e4496b5e19e8f2af9606, type: 3}
+  appleTVSplashScreen2x: {fileID: 2800000, guid: adf66a7dfe66c4cd1b5758c099f12a38,
     type: 3}
-  tvOSSmallIconLayers: []
-  tvOSSmallIconLayers2x: []
-  tvOSLargeIconLayers: []
-  tvOSTopShelfImageLayers: []
-  tvOSTopShelfImageLayers2x: []
-  tvOSTopShelfImageWideLayers: []
-  tvOSTopShelfImageWideLayers2x: []
+  tvOSSmallIconLayers:
+  - {fileID: 2800000, guid: 8eab7cbca067c4186a2374836a7cb046, type: 3}
+  - {fileID: 2800000, guid: 2833bd0b7c899404aa21fa360471e3c3, type: 3}
+  tvOSSmallIconLayers2x:
+  - {fileID: 2800000, guid: 2f00c3b0560ab409eb9759f16cff0f18, type: 3}
+  - {fileID: 2800000, guid: c4bc6bce6c3ee4e9687308f7ae9118b5, type: 3}
+  tvOSLargeIconLayers:
+  - {fileID: 2800000, guid: 9b52eb2a859d74ff9aebf2ac5be7c452, type: 3}
+  - {fileID: 2800000, guid: 804e1cd91f06e4e41a17beb6a8a7aaa6, type: 3}
+  tvOSTopShelfImageLayers:
+  - {fileID: 2800000, guid: b4c1800673e3c40fc9ea55062dbd3cac, type: 3}
+  tvOSTopShelfImageLayers2x:
+  - {fileID: 2800000, guid: 6940478966a6a4e9fad31c20210873c3, type: 3}
+  tvOSTopShelfImageWideLayers:
+  - {fileID: 2800000, guid: 18212916fee9a4fdb8328750ccbca87e, type: 3}
+  tvOSTopShelfImageWideLayers2x:
+  - {fileID: 2800000, guid: ea267f043131f480595b68aab0cec022, type: 3}
   iOSLaunchScreenType: 1
   iOSLaunchScreenPortrait: {fileID: 2800000, guid: 7198054c061e8446bb7bc3df75965157,
     type: 3}
@@ -428,6 +438,13 @@ PlayerSettings:
       m_Icon: {fileID: 2800000, guid: 23ebeebe88aea4e51a73f1a97e7caf6a, type: 3}
       m_Width: 36
       m_Height: 36
+      m_Kind: 0
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 23101ea1704354590997284236b570a6, type: 3}
+      m_Width: 128
+      m_Height: 128
       m_Kind: 0
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
