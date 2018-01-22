@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
+/// <summary>
+/// Main Game Manager.
+/// </summary>
 public class GameManager : MonoBehaviour {
 
 	public static GameManager gm;
@@ -36,11 +39,11 @@ public class GameManager : MonoBehaviour {
 	[Tooltip("Only need to set if canBeatLevel is set to true.")]
 	public AudioClip beatLevelSFX;
 
-
-
 	private Health playerHealth;
 
-
+	/// <summary>
+	/// Use this for initialization.
+	/// </summary>
 	void Start () {
 		if (gm == null) 
 			gm = gameObject.GetComponent<GameManager>();
@@ -51,41 +54,46 @@ public class GameManager : MonoBehaviour {
 
 		playerHealth = player.GetComponent<Health>();
 
-		// setup score display
+		// Setup score display.
 		Collect (0);
 
-		// make other UI inactive
+		// Make other UI inactive.
 		gameOverCanvas.SetActive (false);
 		if (canBeatLevel)
 			beatLevelCanvas.SetActive (false);
 	}
 
+	/// <summary>
+	/// Update is called once per frame.
+	/// </summary>
 	void Update () {
 		switch (gameState)
 		{
 			case gameStates.Playing:
 				if (playerHealth.isAlive == false)
 				{
-					// update gameState
+					// Update gameState.
 					gameState = gameStates.Death;
 
-					// set the end game score
+					// Set the end game score.
 					gameOverScoreDisplay.text = mainScoreDisplay.text;
 
-					// Show Game Over Canvas		
+					// Show Game Over Canvas.		
 					mainCanvas.SetActive (false);
 					gameOverCanvas.SetActive (true);
-					// Set Play Again Button as selected
+
+					// Set Play Again Button as selected.
 					GameObject myEventSystem = GameObject.Find("EventSystem");
 					myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("Play Again Button"));
-				} else if (canBeatLevel && score>=beatLevelScore) {
-					// update gameState
+				}
+				else if (canBeatLevel && score>=beatLevelScore) {
+					// Update gameState.
 					gameState = gameStates.BeatLevel;
 
-					// hide the player so game doesn't continue playing
+					// Hide the player so game doesn't continue playing.
 					player.SetActive(false);
 
-					// Show Beat Level Canvas		
+					// Show Beat Level Canvas.
 					mainCanvas.SetActive (false);
 					beatLevelCanvas.SetActive (true);
 
@@ -104,7 +112,6 @@ public class GameManager : MonoBehaviour {
 				backgroundMusic.volume -= 0.01f;
 				if (backgroundMusic.volume<=0.0f) {
 					AudioSource.PlayClipAtPoint (gameOverSFX,gameObject.transform.position);
-
 					gameState = gameStates.GameOver;
 				}
 				break;
@@ -112,7 +119,6 @@ public class GameManager : MonoBehaviour {
 				backgroundMusic.volume -= 0.01f;
 				if (backgroundMusic.volume<=0.0f) {
 					AudioSource.PlayClipAtPoint (beatLevelSFX,gameObject.transform.position);
-					
 					gameState = gameStates.GameOver;
 				}
 				break;
@@ -123,11 +129,13 @@ public class GameManager : MonoBehaviour {
 
 	}
 
-
+	/// <summary>
+	/// Update the score text.
+	/// </summary>
 	public void Collect(int amount) {
 		score += amount;
 		if (canBeatLevel) {
-			mainScoreDisplay.text = score.ToString () + " of "+beatLevelScore.ToString ();
+			mainScoreDisplay.text = score.ToString () + " of " + beatLevelScore.ToString ();
 		} else {
 			mainScoreDisplay.text = score.ToString ();
 		}

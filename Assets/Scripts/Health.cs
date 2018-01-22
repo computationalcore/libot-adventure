@@ -2,14 +2,19 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// A game object health handler.
+/// </summary>
 public class Health : MonoBehaviour {
 	
 	public enum deathAction {loadLevelWhenDead,doNothingWhenDead};
 	
 	public float healthPoints = 1f;
-	public float respawnHealthPoints = 1f;		//base health points
-	
-	public int numberOfLives = 1;					//lives and variables for respawning
+	// Base health points.
+	public float respawnHealthPoints = 1f;		
+
+	// Lives and variables for respawning.
+	public int numberOfLives = 1;
 	public bool isAlive = true;	
 
 	public GameObject explosionPrefab;
@@ -22,9 +27,10 @@ public class Health : MonoBehaviour {
 	private Quaternion respawnRotation;
 	
 
-	// Use this for initialization
-	void Start () 
-	{
+	/// <summary>
+	/// Use this for initialization.
+	/// </summary>
+	void Start () {
 		// store initial position as respawn location
 		respawnPosition = transform.position;
 		respawnRotation = transform.rotation;
@@ -36,21 +42,29 @@ public class Health : MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () 
-	{
-		if (healthPoints <= 0) {				// if the object is 'dead'
-			numberOfLives--;					// decrement # of lives, update lives GUI
+	/// <summary>
+	/// Update is called once per frame.
+	/// </summary>
+	void Update () {
+		// If the object is 'dead'.
+		if (healthPoints <= 0) {
+			// Decrement # of lives, update lives GUI.
+			numberOfLives--;
 			
 			if (explosionPrefab!=null) {
 				Instantiate (explosionPrefab, transform.position, Quaternion.identity);
 			}
-			
-			if (numberOfLives > 0) { // respawn
-				transform.position = respawnPosition;	// reset the player to respawn position
+
+			// Respawn.
+			if (numberOfLives > 0) { 
+				// Reset the player to respawn position.
+				transform.position = respawnPosition;
 				transform.rotation = respawnRotation;
-				healthPoints = respawnHealthPoints;	// give the player full health again
-			} else { // here is where you do stuff once ALL lives are gone)
+				// Give the player full health again.
+				healthPoints = respawnHealthPoints;
+			}
+			// ALL lives are gone.
+			else { 
 				isAlive = false;
 				
 				switch(onLivesGone)
@@ -66,22 +80,31 @@ public class Health : MonoBehaviour {
 			}
 		}
 	}
-	
-	public void ApplyDamage(float amount)
-	{	
+
+	/// <summary>
+	/// Apply damage to the health points.
+	/// </summary>
+	public void ApplyDamage(float amount) {	
 		healthPoints = healthPoints - amount;	
 	}
-	
-	public void ApplyHeal(float amount)
-	{
+
+	/// <summary>
+	/// Apply heal to the health points.
+	/// </summary>
+	public void ApplyHeal(float amount) {
 		healthPoints = healthPoints + amount;
 	}
 
-	public void ApplyBonusLife(int amount)
-	{
+	/// <summary>
+	/// Add an extra life to the game object that this script instance is attached.
+	/// </summary>
+	public void ApplyBonusLife(int amount) {
 		numberOfLives = numberOfLives + amount;
 	}
-	
+
+	/// <summary>
+	/// Update respawn.
+	/// </summary>
 	public void updateRespawn(Vector3 newRespawnPosition, Quaternion newRespawnRotation) {
 		respawnPosition = newRespawnPosition;
 		respawnRotation = newRespawnRotation;

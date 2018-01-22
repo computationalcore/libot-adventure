@@ -8,7 +8,7 @@ Properties {
 	[NoScaleOffset] _ColorControl ("Reflective color (RGB) fresnel (A) ", 2D) = "" { }
 	[NoScaleOffset] _BumpMap ("Waves Normalmap ", 2D) = "" { }
 	WaveSpeed ("Wave speed (map1 x,y; map2 x,y)", Vector) = (19,9,-16,-7)
-	}
+}
 
 CGINCLUDE
 

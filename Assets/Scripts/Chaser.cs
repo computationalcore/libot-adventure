@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//[RequireComponent(typeof(CharacterController))]
-
+/// <summary>
+/// Setup the chase behavior of a general enemy game object.
+/// </summary>
 public class Chaser : MonoBehaviour {
 	
 	public float speed = 20.0f;
 	public float minDist = 1f;
 	public Transform target;
 
-	// Use this for initialization
-	void Start () 
-	{
-		// if no target specified, assume the player
+	/// <summary>
+	/// Use this for initialization.
+	/// </summary>
+	void Start ()  {
+		// If no target specified, assume the player.
 		if (target == null) {
 
 			if (GameObject.FindWithTag ("Player")!=null)
@@ -22,26 +24,28 @@ public class Chaser : MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () 
-	{
+	/// <summary>
+	/// Update is called once per frame.
+	/// </summary>
+	void Update () {
 		if (target == null)
 			return;
 
-		// face the target
+		// Face the target.
 		transform.LookAt(target);
 
-		//get the distance between the chaser and the target
+		// Get the distance between the chaser and the target.
 		float distance = Vector3.Distance(transform.position,target.position);
 
-		//so long as the chaser is farther away than the minimum distance, move towards it at rate speed.
+		// So long as the chaser is farther away than the minimum distance, move towards it at rate speed.
 		if(distance > minDist)	
 			transform.position += transform.forward * speed * Time.deltaTime;	
 	}
 
-	// Set the target of the chaser
-	public void SetTarget(Transform newTarget)
-	{
+	/// <summary>
+	/// Set the target of the chaser.
+	/// </summary>
+	public void SetTarget(Transform newTarget) {
 		target = newTarget;
 	}
 

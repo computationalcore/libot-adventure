@@ -2,19 +2,28 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// A class that deals with Load Level events.
+/// </summary>
 public class UIButtonLevelLoad : MonoBehaviour {
 
-	// Load a level (scene) by name.
+	/// <summary>
+	/// Load a level (scene) by name..
+	/// </summary>
 	public void loadLevel(string levelName) {
 		SceneManager.LoadScene(levelName);
 	}
 
-	// Load the next level based on build index.
+	/// <summary>
+	/// Load the next level based on the build index of the active scene.
+	/// </summary>
 	public void loadNextLevel() {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	// Reload the current level.
+	/// <summary>
+	/// Reload the current active level.
+	/// </summary>
 	public void reloadLevel() {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}

@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Setup the main menu canvas behavior based on device the game is running.
+/// </summary>
 public class MainMenuCanvasControl : MonoBehaviour {
 
-	// Use this for initialization
+	/// <summary>
+	/// Use this for initialization.
+	/// </summary>
 	void Start () {
 		// Check if the device running is desktop or Apple TV.
 		if (SystemInfo.deviceType != DeviceType.Desktop && (Application.platform != RuntimePlatform.tvOS)) {
@@ -19,7 +24,5 @@ public class MainMenuCanvasControl : MonoBehaviour {
 			GameObject quitButton = GameObject.Find ("Quit Button");
 			quitButton.transform.transform.localPosition = new Vector3(0.0f, -180.0f, 0.0f);
 		}
-
-
 	}
 }

@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Setup the rotate behavior of a game object.
+/// </summary>
 public class Rotate : MonoBehaviour {
 	
 	public float speed = 10.0f;
@@ -9,25 +12,20 @@ public class Rotate : MonoBehaviour {
 
 	public whichWayToRotate way = whichWayToRotate.AroundX;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
+	/// <summary>
+	/// Update is called once per frame.
+	/// </summary>
 	void Update () {
-
-		switch(way)
-		{
-		case whichWayToRotate.AroundX:
-			transform.Rotate(Vector3.right * Time.deltaTime * speed);
-			break;
-		case whichWayToRotate.AroundY:
-			transform.Rotate(Vector3.up * Time.deltaTime * speed);
-			break;
-		case whichWayToRotate.AroundZ:
-			transform.Rotate(Vector3.forward * Time.deltaTime * speed);
-			break;
+		switch(way) {
+			case whichWayToRotate.AroundX:
+				transform.Rotate(Vector3.right * Time.deltaTime * speed);
+				break;
+			case whichWayToRotate.AroundY:
+				transform.Rotate(Vector3.up * Time.deltaTime * speed);
+				break;
+			case whichWayToRotate.AroundZ:
+				transform.Rotate(Vector3.forward * Time.deltaTime * speed);
+				break;
 		}	
 	}
 }

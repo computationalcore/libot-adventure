@@ -1,12 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
+/// <summary>
+/// Setup the mobile canvas behavior based on device the game is running.
+/// </summary>
 public class MobileCanvasControl : MonoBehaviour {
 
-	// Use this for initialization
+	/// <summary>
+	/// Use this for initialization.
+	/// </summary>
 	void Start () {
-		// Check if the device running this is a handheld and show jostick control.
+		// Check if the device running this is not a handheld and hide jostick control. 
+		// Note: AppleTV is listed as Handheld so need to check it separately. 
 		if ( (SystemInfo.deviceType != DeviceType.Handheld) || (Application.platform == RuntimePlatform.tvOS)) {
 			this.gameObject.SetActive (false);
 		}
