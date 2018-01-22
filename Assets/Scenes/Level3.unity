@@ -6469,12 +6469,12 @@ Prefab:
     - target: {fileID: 224791224744325072, guid: 09cdde0ccf139412b9387a871a1fdc3d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 399.99994
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 224791224744325072, guid: 09cdde0ccf139412b9387a871a1fdc3d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 224.95477
+      value: 224.95459
       objectReference: {fileID: 0}
     - target: {fileID: 224791224744325072, guid: 09cdde0ccf139412b9387a871a1fdc3d,
         type: 2}
@@ -12048,8 +12048,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 613873096}
   gameState: 0
-  score: 42
+  score: 0
   canBeatLevel: 1
+  isFinalLevel: 0
   beatLevelScore: 50
   mainCanvas: {fileID: 1085701265}
   mainScoreDisplay: {fileID: 1085701264}
@@ -14067,11 +14068,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4156798437703472, guid: 93acc49b5a9f4e84b89aa62e0282a2a3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.863844
+      value: 7.86
       objectReference: {fileID: 0}
     - target: {fileID: 4156798437703472, guid: 93acc49b5a9f4e84b89aa62e0282a2a3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.0286655
+      value: -11.4
       objectReference: {fileID: 0}
     - target: {fileID: 4156798437703472, guid: 93acc49b5a9f4e84b89aa62e0282a2a3, type: 2}
       propertyPath: m_LocalPosition.z
