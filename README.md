@@ -35,6 +35,8 @@ Open the downloaded libot-adventure folder inside Unity3D.
 
 ## Assets Credits 
 
+* LiBot Atom Symbol - [Atom](https://www.flaticon.com/free-icon/atom_106226#term=atom&page=1&position=59) made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com). 
+
 #### Musics and Sounds
 
 * Post Level Voices - [Generic Video Game Voice Overs](https://freesound.org/people/shawshank73/sounds/78916/)
