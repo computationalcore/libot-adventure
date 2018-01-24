@@ -12,7 +12,7 @@ public class MainMenuCanvasControl : MonoBehaviour {
 	/// </summary>
 	void Start () {
 		// Check if the device running is desktop or Apple TV.
-		if (SystemInfo.deviceType != DeviceType.Desktop && (Application.platform != RuntimePlatform.tvOS)) {
+		if (SystemInfo.deviceType != DeviceType.Desktop && (Application.platform != RuntimePlatform.WebGLPlayer) && (Application.platform != RuntimePlatform.tvOS)) {
 			GameObject quitButton = GameObject.Find ("Quit Button");
 			quitButton.SetActive (false);
 		}

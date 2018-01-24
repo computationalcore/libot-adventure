@@ -5905,8 +5905,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1640442554}
   gameState: 0
-  score: 18
+  score: 0
   canBeatLevel: 1
+  isFinalLevel: 0
   beatLevelScore: 25
   mainCanvas: {fileID: 982586933}
   mainScoreDisplay: {fileID: 2060889567}

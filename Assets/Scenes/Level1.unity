@@ -1900,6 +1900,7 @@ MonoBehaviour:
   gameState: 0
   score: 0
   canBeatLevel: 1
+  isFinalLevel: 0
   beatLevelScore: 5
   mainCanvas: {fileID: 914563712}
   mainScoreDisplay: {fileID: 1479401081}
