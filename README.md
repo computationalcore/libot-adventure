@@ -15,7 +15,7 @@ This game is inspired on Roller Madness, a programming assignment of the [Game D
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing 
-purposes. 
+purposes.
 
 ### Prerequisites
 
@@ -23,12 +23,15 @@ The project must be built with [Unity3D](https://unity3d.com/get-unity).
 
 Download and install it before proceed. Any license is ok.
 
+It is also necessary to download/update to a git version with LSF (Large File Storage) support. Check here for more 
+information about this: [https://git-lfs.github.com/](https://git-lfs.github.com/)
+
 ### Installing
 
 To download the project follow the instructions bellow
 
 ```
-git clone https://github.com/computationalcore/libot-adventure
+git lsf clone https://github.com/computationalcore/libot-adventure
 ```
 
 Open the downloaded libot-adventure folder inside Unity3D.
