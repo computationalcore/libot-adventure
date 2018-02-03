@@ -23,7 +23,10 @@ public class GameManager : MonoBehaviour {
 	[Tooltip("Mark this is current scene/level is the final one.")]
 	public bool isFinalLevel = false;
 
-	public int beatLevelScore = 0;
+	[Tooltip("The score necessary to beat the level in each difficulty.")]
+	public int beatEasyLevelScore = 0;
+	public int beatNormalLevelScore = 0;
+	public int beatHardLevelScore = 0;
 
 	public GameObject mainCanvas;
 	public Text mainScoreDisplay;
@@ -39,7 +42,19 @@ public class GameManager : MonoBehaviour {
 	[Tooltip("Only need to set if canBeatLevel is set to true.")]
 	public AudioClip beatLevelSFX;
 
+	[Tooltip("Only need to set if canBeatLevel is set to true.")]
+	public GameObject introBeatLevelCanvas;
+
+	[Tooltip("Only need to set if canBeatLevel is set to true.")]
+	public Text introBeatLevelText;
+
+	private float introBeatLevelTextDuration = 2.0f;
+	private float introSavedTime;
+
 	private Health playerHealth;
+
+	// The beat score level
+	private int beatLevelScore = 0;
 
 	/// <summary>
 	/// Use this for initialization.
@@ -54,13 +69,61 @@ public class GameManager : MonoBehaviour {
 
 		playerHealth = player.GetComponent<Health>();
 
-		// Setup score display.
-		Collect (0);
-
 		// Make other UI inactive.
 		gameOverCanvas.SetActive (false);
-		if (canBeatLevel)
+		if (canBeatLevel) {
+			// Set beat level score based on game difficulty.
+			switch (GameSettings.difficulty) {
+				case GameSettings.gameDifficulties.Hard:
+					GameObject.FindGameObjectWithTag ("EasyModeCanvas").SetActive (false);
+					GameObject.FindGameObjectWithTag ("NormalModeCanvas").SetActive (false);
+					GameObject.FindGameObjectWithTag ("HardModeCanvas").SetActive (true);
+					beatLevelScore = beatHardLevelScore;
+					break;
+				case GameSettings.gameDifficulties.Normal:
+					GameObject.FindGameObjectWithTag ("EasyModeCanvas").SetActive (false);
+					GameObject.FindGameObjectWithTag ("NormalModeCanvas").SetActive (true);
+					GameObject.FindGameObjectWithTag ("HardModeCanvas").SetActive (false);
+					beatLevelScore = beatNormalLevelScore;
+					break;
+				// Easy is the default
+				default:
+					GameObject.FindGameObjectWithTag ("EasyModeCanvas").SetActive (true);
+					GameObject.FindGameObjectWithTag ("NormalModeCanvas").SetActive (false);
+					GameObject.FindGameObjectWithTag ("HardModeCanvas").SetActive (false);
+					beatLevelScore = beatEasyLevelScore;
+					break;
+			}
+
 			beatLevelCanvas.SetActive (false);
+			// Show intro level goal message (Only at first level load, doesnt show after a gameover)
+			if (GameSettings.showIntroLevelMessage) {
+				introBeatLevelText.text = "GET " + beatLevelScore.ToString () + " COINS\nTO BEAT THE LEVEL!";
+				GameSettings.showIntroLevelMessage = false;
+				StartCoroutine (ShowIntroBeatLevelCanvas ());
+			}
+		}
+
+		// Setup score display.
+		Collect (0);
+			
+	}
+
+	/// <summary>
+	/// Show intro level message with information about the coins that needs to be collected by the user to beat the level.
+	/// </summary>
+	public IEnumerator ShowIntroBeatLevelCanvas() {
+		// Show intro beat message canvas canvas
+		introBeatLevelCanvas.SetActive (true);
+		// Hide main canvas
+		mainCanvas.SetActive (false);
+		Time.timeScale = 0.000001f;
+		yield return new WaitForSeconds (introBeatLevelTextDuration * Time.timeScale);
+		Time.timeScale = 1;
+		// Hide intro beat message canvas canvas
+		introBeatLevelCanvas.SetActive (false);
+		// Show main canvas
+		mainCanvas.SetActive (true);
 	}
 
 	/// <summary>
@@ -70,8 +133,7 @@ public class GameManager : MonoBehaviour {
 		switch (gameState)
 		{
 			case gameStates.Playing:
-				if (playerHealth.isAlive == false)
-				{
+				if (playerHealth.isAlive == false) {
 					// Update gameState.
 					gameState = gameStates.Death;
 
@@ -119,6 +181,8 @@ public class GameManager : MonoBehaviour {
 				backgroundMusic.volume -= 0.01f;
 				if (backgroundMusic.volume<=0.0f) {
 					AudioSource.PlayClipAtPoint (beatLevelSFX,gameObject.transform.position);
+					// If pass on current level should show set to true to show the intro message on the next level.
+					GameSettings.showIntroLevelMessage = true;
 					gameState = gameStates.GameOver;
 				}
 				break;

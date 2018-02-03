@@ -15,7 +15,7 @@ public class SpawnGameObjects : MonoBehaviour {
 
 	// Set this if the spawners should chase another game object.
 	public Transform chaseTarget;
-	
+
 	private float savedTime;
 	private float secondsBetweenSpawning;
 
@@ -26,7 +26,7 @@ public class SpawnGameObjects : MonoBehaviour {
 		savedTime = Time.time;
 		secondsBetweenSpawning = Random.Range (minSecondsBetweenSpawning, maxSecondsBetweenSpawning);
 	}
-	
+
 	/// <summary>
 	/// Update is called once per frame
 	/// </summary>

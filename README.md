@@ -23,7 +23,7 @@ The project must be built with [Unity3D](https://unity3d.com/get-unity).
 
 Download and install it before proceed. Any license is ok.
 
-It is also necessary to download/update to a git version with LSF (Large File Storage) support. Check here for more 
+It is also necessary to download/update to a git version with LFS (Large File Storage) support. Check here for more 
 information about this: [https://git-lfs.github.com/](https://git-lfs.github.com/)
 
 ### Installing
@@ -31,7 +31,7 @@ information about this: [https://git-lfs.github.com/](https://git-lfs.github.com
 To download the project follow the instructions bellow
 
 ```
-git lsf clone https://github.com/computationalcore/libot-adventure
+git lfs clone https://github.com/computationalcore/libot-adventure
 ```
 
 Open the downloaded libot-adventure folder inside Unity3D.

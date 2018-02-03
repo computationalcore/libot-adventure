@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114511155600147728}
   - component: {fileID: 114219012098831672}
   m_Layer: 0
-  m_Name: Crate Enemy
+  m_Name: Enemy - Crater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

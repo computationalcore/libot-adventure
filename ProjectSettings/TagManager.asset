@@ -7,6 +7,11 @@ TagManager:
   - Pickup
   - MobileJostick
   - MobileJostickHandle
+  - MainMenu
+  - DifficultCanvas
+  - EasyModeCanvas
+  - NormalModeCanvas
+  - HardModeCanvas
   layers:
   - Default
   - TransparentFX
