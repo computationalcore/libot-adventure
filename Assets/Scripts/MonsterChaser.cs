@@ -5,11 +5,20 @@ using System.Collections;
 /// Setup the chase behavior of a monster game object.
 /// </summary>
 public class MonsterChaser : MonoBehaviour {
-	
-	public float speed = 10.0f;
+
+	// Speed of the monster at different game difficulty.
+	[Tooltip("Speed of the monster when game difficulty is Easy.")]
+	public float speedEasy = 6.0f;
+	[Tooltip("Speed of the monster when game difficulty is Normal.")]
+	public float speedNormal = 8.0f;
+	[Tooltip("Speed of the monster when game difficulty is Hard.")]
+	public float speedHard = 10.0f;
+
 	public float maxDist = 25f;
 	public float minDist = 1f;
 	public Transform target;
+
+	private float speed;
 
 	/// <summary>
 	/// Use this for initialization.
@@ -21,6 +30,15 @@ public class MonsterChaser : MonoBehaviour {
 			{
 				target = GameObject.FindWithTag ("Player").GetComponent<Transform>();
 			}
+		}
+
+		// Speed of the monster is based on the game difficulty.
+		if (GameSettings.difficulty == GameSettings.gameDifficulties.Normal) {
+			speed = speedNormal;
+		} else if (GameSettings.difficulty == GameSettings.gameDifficulties.Hard) {
+			speed = speedHard;
+		} else {
+			speed = speedEasy;
 		}
 	}
 	

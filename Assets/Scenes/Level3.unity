@@ -12173,7 +12173,7 @@ MonoBehaviour:
   score: 0
   canBeatLevel: 1
   isFinalLevel: 0
-  beatEasyLevelScore: 25
+  beatEasyLevelScore: 20
   beatNormalLevelScore: 40
   beatHardLevelScore: 60
   mainCanvas: {fileID: 1085701265}
