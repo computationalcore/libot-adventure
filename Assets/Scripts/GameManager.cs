@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour {
 	/// Use this for initialization.
 	/// </summary>
 	void Start () {
+		Debug.Log("Start run!");
 		if (gm == null) 
 			gm = gameObject.GetComponent<GameManager>();
 
