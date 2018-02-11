@@ -57,7 +57,11 @@ public class MainMenu : MonoBehaviour {
 	{
 		availableTutorialTargets = new GameObject[] { coin, crate, stoneMonster };
 		availableTutorialTitle = new string[] { "Coin", "Mystic Crate", "Stone Monster" };
-		availableTutorialDescription = new string[] { "To complete the level you must collect a certain number of coins indicated when each level starts", "The mystic crate the spawned frequently by the game, it chases the LiBot", "This monster pass throght any solid, including rocks and the ground. It chases the player when it is in contact view" };
+		availableTutorialDescription = new string[] { 
+			"To complete the level you must collect a certain number of this coins, indicated when each level starts",
+			"You must avoid touching this crates, they are enemies that chases you over the game",
+			"This enemy chases you when you gets a certain distance from it and try to bite. They pass through any solid, including rocks and the ground."
+		};
 		//tutorialTarget = availableTutorialTargets [targetIndex].transform;
 		SetTarget (targetIndex);
 

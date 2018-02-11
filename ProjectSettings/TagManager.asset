@@ -12,12 +12,6 @@ TagManager:
   - EasyModeCanvas
   - NormalModeCanvas
   - HardModeCanvas
-  - TutorialLight
-  - TutorialCameraPosition
-  - MainMenuCameraPosition
-  - TutorialCanvas
-  - TutorialGameElements
-  - TutorialExitCanvas
   layers:
   - Default
   - TransparentFX
