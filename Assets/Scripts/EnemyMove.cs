@@ -14,6 +14,18 @@ public class EnemyMove : MonoBehaviour {
 	private int myWaypointId = 0;
 
 	/// <summary>
+	/// Use this for initialization.
+	/// </summary>
+	void Start () {
+		// Speed of the box is based on the game difficulty.
+		if (GameSettings.difficulty == GameSettings.gameDifficulties.Easy) {
+			moveSpeed = moveSpeed * 0.6f;
+		} else if (GameSettings.difficulty == GameSettings.gameDifficulties.Normal) {
+			moveSpeed = moveSpeed * 0.8f;
+		}
+	}
+
+	/// <summary>
 	/// Update is called once per frame.
 	/// </summary>
 	void EnemyMovement() {

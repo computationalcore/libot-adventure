@@ -8,11 +8,11 @@ public class MonsterChaser : MonoBehaviour {
 
 	// Speed of the monster at different game difficulty.
 	[Tooltip("Speed of the monster when game difficulty is Easy.")]
-	public float speedEasy = 6.0f;
+	public float speedEasy = 2.0f;
 	[Tooltip("Speed of the monster when game difficulty is Normal.")]
-	public float speedNormal = 8.0f;
+	public float speedNormal = 5.0f;
 	[Tooltip("Speed of the monster when game difficulty is Hard.")]
-	public float speedHard = 10.0f;
+	public float speedHard = 8.0f;
 
 	public float maxDist = 25f;
 	public float minDist = 1f;

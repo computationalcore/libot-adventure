@@ -28,8 +28,8 @@ public class SetupLevel : MonoBehaviour {
 					for (int j = -1; j <= 1; j++) {
 						// Create and set up a new EnemySpawner game object.
 						GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
-						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
 					}
 				}
 				break;
@@ -39,11 +39,11 @@ public class SetupLevel : MonoBehaviour {
 
 						// Returns a random float number between and min [inclusive] and max [inclusive].
 						float random = Random.Range (0.0f, 3.0f);
-						if (random <= 1) {
+						if (random <= 1.5) {
 							// Create a new CoinSpawner game object.
 							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 5.0f;
 						} else {
 							// Create a new EnemySpawner game object.
 							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
@@ -59,16 +59,16 @@ public class SetupLevel : MonoBehaviour {
 					for (int j = -1; j <= 1; j++) {
 						// Returns a random float number between and min [inclusive] and max [inclusive].
 						float random = Random.Range (0.0f, 3.0f);
-						if (random <= 1.5) {
+						if (random <= 2.0) {
 							// Create a new CoinSpawner game object.
 							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
 							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 5.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 3.0f;
 						} else {
 							// Create a new EnemySpawner game object.
 							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 10.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 15.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 15.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 20.0f;
 						}
 					}
 				}
@@ -84,8 +84,8 @@ public class SetupLevel : MonoBehaviour {
 					for (int j = -1; j <= 1; j++) {
 						// Create and set up a new EnemySpawner game object.
 						GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
-						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
 					}
 				}
 				break;
@@ -93,26 +93,6 @@ public class SetupLevel : MonoBehaviour {
 				for (int i = -1; i <= 1; i++) {
 					for (int j = -1; j <= 1; j++) {
 
-						// Returns a random float number between and min [inclusive] and max [inclusive].
-						float random = Random.Range (0.0f, 3.0f);
-						if (random <= 1) {
-							// Create a new CoinSpawner game object.
-							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
-						} else {
-							// Create a new EnemySpawner game object.
-							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
-						}
-					}
-				}
-				break;
-				// Easy is the default
-			default:
-				for (int i = -1; i <= 1; i++) {
-					for (int j = -1; j <= 1; j++) {
 						// Returns a random float number between and min [inclusive] and max [inclusive].
 						float random = Random.Range (0.0f, 3.0f);
 						if (random <= 1.5) {
@@ -125,6 +105,26 @@ public class SetupLevel : MonoBehaviour {
 							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
 							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 10.0f;
 							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 15.0f;
+						}
+					}
+				}
+				break;
+				// Easy is the default
+			default:
+				for (int i = -1; i <= 1; i++) {
+					for (int j = -1; j <= 1; j++) {
+						// Returns a random float number between and min [inclusive] and max [inclusive].
+						float random = Random.Range (0.0f, 3.0f);
+						if (random <= 2.0) {
+							// Create a new CoinSpawner game object.
+							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 3.0f;
+						} else {
+							// Create a new EnemySpawner game object.
+							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 15, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 15.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 20.0f;
 						}
 					}
 				}
@@ -140,32 +140,12 @@ public class SetupLevel : MonoBehaviour {
 					for (int j = -2; j <= 2; j++) {
 						// Create and set up a new EnemySpawner game object.
 						GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
-						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
 					}
 				}
 				break;
 			case GameSettings.gameDifficulties.Normal:
-				for (int i = -2; i <= 2; i++) {
-					for (int j = -2; j <= 2; j++) {
-						// Returns a random float number between and min [inclusive] and max [inclusive].
-						float random = Random.Range (0.0f, 3.0f);
-						if (random <= 1) {
-							// Create a new CoinSpawner game object.
-							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
-						} else {
-							// Create a new EnemySpawner game object.
-							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
-						}
-					}
-				}
-				break;
-				// Easy is the default
-			default:
 				for (int i = -2; i <= 2; i++) {
 					for (int j = -2; j <= 2; j++) {
 						// Returns a random float number between and min [inclusive] and max [inclusive].
@@ -180,6 +160,26 @@ public class SetupLevel : MonoBehaviour {
 							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
 							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 10.0f;
 							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 15.0f;
+						}
+					}
+				}
+				break;
+				// Easy is the default
+			default:
+				for (int i = -2; i <= 2; i++) {
+					for (int j = -2; j <= 2; j++) {
+						// Returns a random float number between and min [inclusive] and max [inclusive].
+						float random = Random.Range (0.0f, 3.0f);
+						if (random <= 2.0) {
+							// Create a new CoinSpawner game object.
+							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 3.0f;
+						} else {
+							// Create a new EnemySpawner game object.
+							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 15.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 20.0f;
 						}
 					}
 				}
@@ -194,32 +194,12 @@ public class SetupLevel : MonoBehaviour {
 					for (int j = -3; j <= 3; j++) {
 						// Create and set up a new EnemySpawner game object.
 						GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
-						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
+						clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
 					}
 				}
 				break;
 			case GameSettings.gameDifficulties.Normal:
-				for (int i = -3; i <= 3; i++) {
-					for (int j = -3; j <= 3; j++) {
-						// Returns a random float number between and min [inclusive] and max [inclusive].
-						float random = Random.Range (0.0f, 3.0f);
-						if (random <= 1) {
-							// Create a new CoinSpawner game object.
-							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
-						} else {
-							// Create a new EnemySpawner game object.
-							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
-							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 5.0f;
-							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 10.0f;
-						}
-					}
-				}
-				break;
-				// Easy is the default
-			default:
 				for (int i = -3; i <= 3; i++) {
 					for (int j = -3; j <= 3; j++) {
 						// Returns a random float number between and min [inclusive] and max [inclusive].
@@ -234,6 +214,26 @@ public class SetupLevel : MonoBehaviour {
 							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
 							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 10.0f;
 							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 15.0f;
+						}
+					}
+				}
+				break;
+				// Easy is the default
+			default:
+				for (int i = -3; i <= 3; i++) {
+					for (int j = -3; j <= 3; j++) {
+						// Returns a random float number between and min [inclusive] and max [inclusive].
+						float random = Random.Range (0.0f, 3.0f);
+						if (random <= 2.0) {
+							// Create a new CoinSpawner game object.
+							GameObject clone = Instantiate (coinSpawnerPrefab, new Vector3 (i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 1.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 3.0f;
+						} else {
+							// Create a new EnemySpawner game object.
+							GameObject clone = Instantiate (enemySpawnerPrefab, new Vector3(i * averageDistanceBetweenPrefabs, 30, j * averageDistanceBetweenPrefabs), Quaternion.identity) as GameObject;
+							clone.gameObject.GetComponent<SpawnGameObjects>().minSecondsBetweenSpawning = 15.0f;
+							clone.gameObject.GetComponent<SpawnGameObjects>().maxSecondsBetweenSpawning = 20.0f;
 						}
 					}
 				}

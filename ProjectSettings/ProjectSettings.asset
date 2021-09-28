@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.1.1
+  bundleVersion: 1.2.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -154,12 +154,12 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.computationalcore.libotadventure
-    Standalone: com.vinbusquet.LiBotAdventure
+    Standalone: com.vinbusquet.LiBotAdventure.macos
     iPhone: com.vinbusquet.LiBotAdventure
     tvOS: com.vinbusquet.LiBotAdventure
   buildNumber:
     Standalone: 3
-    iPhone: 2
+    iPhone: 3
     tvOS: 2
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 2
